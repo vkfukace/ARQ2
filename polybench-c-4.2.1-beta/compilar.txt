@@ -1,0 +1,1 @@
+gcc -O3 -I utilities -I linear-algebra/blas/trmm  utilities/polybench.c linear-algebra/blas/trmm/trmm.c -DPOLYBENCH_TIME -DPOLYBENCH_USE_C99_PROTO -DCUSTOM_DATASET -o trmm_CUSTOM
