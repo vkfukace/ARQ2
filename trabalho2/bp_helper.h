@@ -11,7 +11,6 @@
 
 #ifndef _BP_HELPER_H_
 #define _BP_HELPER_H_
-#include <deque>
 #include <vector>
 #include <cmath>
 
@@ -59,7 +58,7 @@ public:
         }
     }
 
-    void atualiza(int i, bool tomado)
+    void atualiza(unsigned int i, bool tomado)
     {
         // cout << "update PHT num " << i << endl;
 
@@ -77,21 +76,16 @@ public:
     }
 
     // Retorna o bit de previsão da entrada n do PHT
-    bool previsao(int n)
+    bool previsao(unsigned int n)
     {
-        switch (contSaturado[n])
+        if (contSaturado[n] < 2)
         {
-        case 0:
             return false;
-        case 1:
-            return false;
-        case 2:
-            return true;
-        case 3:
+        }
+        else
+        {
             return true;
         }
-        // não deveria chegar aqui, só serve para remover mensagens de warning
-        return false;
     }
 };
 

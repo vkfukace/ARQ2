@@ -62,4 +62,4 @@ make BP=gag
 #      <bp>      - the branch predictors (e.g. bp_btfn.so)
 #      <program> - any executable file
 #    Results are in stats.out.
-pin -t obj-intel64/bp_gap.so -- test/trmm
+pin -t obj-intel64/bp_gap.so -- test/trmm_CUSTOM
